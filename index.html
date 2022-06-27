@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	  <meta charset="utf-8">
+	  <meta name="viewport" content="width=device-width">
+	  <title>Speech to Text Test</title>
+	  <link rel="stylesheet" href="https://css.furret.codes/css/library.min.css" />
+	</head>
+	
+	<body>
+		<div class="container">
+			<h1>Speech 2 Text</h1>
+			<p>
+				Testing Chrome's <a href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Speech_API/Using_the_Web_Speech_API">Web Speech API</a>
+				for a Speech Recognition project.
+			</p>
+	
+			<blockquote cite="https://developer.mozilla.org/en-US/docs/Web/API/Web_Speech_API/Using_the_Web_Speech_API">
+				<p>
+					Speech recognition involves receiving speech through a device's microphone,
+					which is then checked by a speech recognition service against a list of
+					grammar (basically, the vocabulary you want to have recognized in a particular
+					app.) When a word or phrase is successfully recognized, it is returned as a result
+					(or list of results) as a text string, and further actions can be initiated as a
+					result.
+				</p>
+				
+				<footer>
+					<cite>MDN, "Using the Web Speech API"</cite>
+				</footer>
+			</blockquote>
+
+			<p>
+				The below two examples use the Web Speech API. It only works on Chrome and
+				Safari currently.
+			</p>
+	
+			<h2>Example 1</h2>
+		
+			<p>
+				This example will record audio and then transcribe what was spoken to text,
+				as well as present the accuracy of the transcription.
+			</p>
+
+			<p><button type="button" id="startExample1">Start</button> &nbsp; <span id="action1">Press the button to start!</span></p>
+	
+			<form>
+				<label for="output1">Output</label>
+				<textarea id="output1" type="textarea" readonly rows="4"></textarea>
+			</form>
+
+			<h2>Example 2</h2>
+
+			<p>
+				This example uses a predefined list of correct values to choose a CSS color
+				and then set the <code>background-color</code> property of the input to the
+				spoken color.
+			</p>
+
+			<p><button type="button" id="startExample2">Start</button> &nbsp; <span id="action2">Dicatate a CSS color value!</span></p>
+	
+			<form>
+				<label for="output2">Output</label>
+				<input id="output2" type="text" readonly></input>
+			</form>
+		</div>
+	
+		<script src="script.js"></script>
+	</body>
+</html>
